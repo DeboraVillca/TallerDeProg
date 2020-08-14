@@ -1,0 +1,15 @@
+import rodados.*
+test "testDeportes" {
+	var cachito =new Corsa(color="rojo")
+	var especial =new Especial(capacidad=5, peso=1200, velocidadMax=160, color="beige")
+	var depo=new Dependencias()
+	
+	depo.cantidadempleados(45)
+	depo.agregarAFlota(cachito)
+	depo.agregarAFlota(new Corsa(color="azul"))
+	depo.agregarAFlota(new Corsa(color="verde"))
+	depo.agregarAFlota(new Kwid(tieneTanque=true))
+	depo.agregarAFlota(especial)
+	assert.equals(25, depo.capacidadFaltante())
+
+}
